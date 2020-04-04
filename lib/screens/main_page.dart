@@ -13,37 +13,32 @@ class MainPage extends KFDrawerContent {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Center(
-        child: Column(
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                  child: Material(
-                    shadowColor: Colors.transparent,
-                    color: Colors.transparent,
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.menu,
-                        color: Colors.black,
-                      ),
-                      onPressed: widget.onMenuPressed,
-                    ),
-                  ),
+    return Scaffold(
+      appBar: AppBar(
+        title: new Text("Main"),
+        leading: GestureDetector(
+          onTap: () {
+            widget.onMenuPressed();
+          },
+          child: Icon(
+            Icons.menu, // add custom icons also
+          ),
+        ),
+      ),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Main'),
+                  ],
                 ),
-              ],
-            ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text('Main'),
-                ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
