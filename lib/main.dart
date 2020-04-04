@@ -43,13 +43,13 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
       initialPage: ClassBuilder.fromString('MainPage'),
       items: [
         KFDrawerItem.initWithPage(
-          text: Text('MAIN', style: TextStyle(color: Colors.white)),
+          text: Text('Main', style: TextStyle(color: Colors.white)),
           icon: Icon(Icons.home, color: Colors.white),
           page: MainPage(),
         ),
         KFDrawerItem.initWithPage(
           text: Text(
-            'CALENDAR',
+            'Calendar',
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.calendar_today, color: Colors.white),
@@ -57,7 +57,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
         ),
         KFDrawerItem.initWithPage(
           text: Text(
-            'SETTINGS',
+            'Settings',
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.settings, color: Colors.white),
@@ -89,7 +89,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
         ),
         footer: KFDrawerItem(
           text: Text(
-            'SIGN IN',
+            'Sign in',
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(

@@ -16,6 +16,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         title: new Text("Main"),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             widget.onMenuPressed();
